@@ -11,10 +11,20 @@
    elemСlass - название класса, которое проверяется.
 */
 
-export function hasClass(elem, elemClass) {}
+export function hasClass(elem, elemClass) {
+    return elem.classList.contains(elemClass) ? true : false;
+}
 
-export function addClass(elem, elemClass) {}
+export function addClass(elem, elemClass) {
+    elem.classList.add(elemClass);
+}
 
-export function removeClass(elem, elemClass) {}
+export function removeClass(elem, elemClass) {
+    elem.classList.remove(elemClass);
+}
 
-export function toggleClass(elem, elemClass) {}
+export function toggleClass(elem, elemClass) {
+    elem.classList.contains(elemClass)
+        ? elem.classList.remove(elemClass)
+        : elem.classList.add(elemClass);
+}
